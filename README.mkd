@@ -1,0 +1,19 @@
+Loads query history into new query windows by looking into chat logs.
+
+INSTALL
+=======
+
+Copy queryhistory.pl to `~/.irssi/scripts/`.
+    /script load query history.pl
+
+OR to have script loaded when irssi starts
+copy queryhistory.pl to `~/.irssi/scripts/autorun/`.
+
+CONFIG
+======
+
+Limit the number of lines to be loaded.
+    /SET queryhistory_line_limit [number]
+
+Limit the number of days to look back.
+    /SET queryhistory_day_limit [number]
