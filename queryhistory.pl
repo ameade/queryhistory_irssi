@@ -3,7 +3,7 @@
 use strict;
 
 use vars qw($VERSION %IRSSI);
-$VERSION = '20130302';
+$VERSION = '20130823';
 %IRSSI = (
     authors     => 'Alex \'ameade\'Meade',
     contact     => 'hatboy112@yahoo.com',
@@ -49,7 +49,7 @@ sub sig_window_item_new ($$) {
         open(F, "<".bsd_glob($filename));
         my $item;
         foreach $item (<F>) {
-            if ($item =~ /\[.*\]/)
+            if ($item =~ /\[.*\]/ or $item =~ /\<.*\>/)
             {
                 push(@data, $item);
                 shift(@data) if (@data > $lines);
